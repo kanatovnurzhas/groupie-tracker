@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../ui/css/artist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Groupie Tracker</a>
+            <a href="https://01.alem.school/git/Nurzhas/groupie-tracker">Nurzhas & Asem</a>
+        </nav>
+    </header>
+    <section class="main">
+        <div class="main-container">
+            <img src="{{ .Image }}">
+            <h2 class="artist-name">{{ .Name }}</h2>
+            <div class="members"><b>Members:</b> 
+                <div class="member">
+                    {{range .Members }}
+                    <p>{{.}}</p>
+                    {{end}}
+                </div>
+            </div>
+            <div>
+                <p><b>Date of Creation:</b> </p>
+                {{ .CreationDate }}
+            </div>
+            <div>
+                <p><b>First Album:</b></p> 
+                {{ .FirstAlbum }}
+            </div>
+            <div class="info">
+                <p><b>Concerts:</b></p>
+                <ol>
+                    {{range $key, $value := .Concerts}}
+                    <li class="placemark" id="placemark">{{$key}}
+                        <ul>{{range $value}}
+                        <li id="dates">{{.}}</li>
+                        {{end}}
+                        </ul>
+                    </li>
+                    {{end}}
+                    </ol>
+                </div>
+        </div>
+    </section>
+</body>
+</html>

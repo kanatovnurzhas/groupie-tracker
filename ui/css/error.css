@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=opensans:500);
+
+body{
+    font-family: 'Cormorant SC', serif;
+    margin: 0;
+    background: linear-gradient(0deg, hsla(208, 7%, 55%, 1) 0%, rgb(36, 37, 37) 100%);
+    background: -moz-linear-gradient(0deg, hsla(208, 7%, 55%, 1) 0%, rgb(36, 37, 37) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(208, 7%, 55%, 1) 0%, rgb(36, 37, 37) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
+}
+.c{
+    text-align: center;
+    display: block;
+    position: relative;
+    width:80%;
+    margin:8% auto;
+}
+._404{
+    font-size: 1000%;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    padding-bottom: 0%;
+
+}
+._1{
+    margin-top: 10px;
+    padding-top: 1%;
+    text-align:center;
+    display:block;
+    position:relative;
+    font-size:340%;
+    margin-top: 1%;
+    line-height: 100%;
+}
+._2{
+    text-align:center;
+    display:block;
+    position:relative;
+    font-size:340%;
+    margin-top: 1%;
+    line-height: 100%;
+}
+hr{
+    border: none;
+    border-top: 5px solid #fff;
+    color: #fff;
+    text-align: center;
+    margin: 0px auto;
+    z-index: -10;
+    min-width: 40%;
+}

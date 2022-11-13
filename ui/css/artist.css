@@ -1,0 +1,88 @@
+body {
+    margin:0;
+    background: linear-gradient(0deg, rgb(32, 117, 182) 0%, rgb(55, 121, 121) 100%);
+    background: -moz-linear-gradient(0deg, rgb(70, 130, 175) 0%, rgb(39, 139, 139) 100%);
+    background: -webkit-linear-gradient(0deg, rgb(66, 120, 161) 0%, rgb(46, 136, 136) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858E96", endColorstr="#60696B", GradientType=1 );
+}
+
+header {
+    position: relative;
+    top: 0;
+    display: block;
+    z-index: 5;
+    font-weight: 700;
+    background-color: rgba(240, 248, 255, 0.1);
+}
+
+nav {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+nav a {
+    color: aliceblue;
+    font-weight: 800;
+    text-decoration: none;
+
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas:
+    "img name"
+    "img members"
+    "img date"
+    "img album"
+    "img info";
+    width: 60%;
+    margin: 80px auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: 28px;
+    gap: 2em;
+}
+
+.main-container img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.artist-name, .members, .date, .album{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.artist-name {
+    font-size: 2em;
+    font-weight: 700;
+    grid-area: name;
+}
+
+.members {
+    font-size: 1em;
+    grid-area: members;
+}
+
+.date {
+    font-size: 1em;
+    grid-area: date;
+}
+
+.album {
+    font-size: 1em;
+    grid-area: album;
+}
+
+.info{
+    font-size: 1em;
+    grid-area: info;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ui/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Groupie Tracker</a>
+            <a href="https://01.alem.school/git/Nurzhas/groupie-tracker">Nurzhas & Asem</a>
+        </nav>
+    </header>
+    <section class="main">
+        <div class="cards">
+            {{range .}}
+            <div class="cards-body">
+                <a href="/artist/{{ .Id}}">
+                    <img src="{{ .Image }}" alt="{{ .Name }}" loading="lazy" width="400" name="ID">
+                    <span class="name">{{ .Name }}</span>
+                </a>
+            </div>
+            {{end}}
+        </div>
+    </section>
+</body>
+</html>
